@@ -3,8 +3,7 @@
 $request_method = $_SERVER['REQUEST_METHOD'];
 
 if ($request_method == "POST") {
-    echo 'hello';
-    echo $_POST['name'];
+    header("location: message.php");
 }
 
 
