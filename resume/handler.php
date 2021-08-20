@@ -3,8 +3,7 @@
 $request_method = $_SERVER['REQUEST_METHOD'];
 
 if ($request_method == "POST") {
-    echo 'hello';
-    echo $_POST['name'];
+    header("location: message.php");
 }
 
 
@@ -58,11 +57,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             'X-Mailer: PHP/' . phpversion();
             
             // Sending email
-            if(mail($to, $subject, $message, $headers)){
-                echo '<p class="success">Your message has been sent successfully!</p>';
-            } else{
-                echo '<p class="error">Unable to send email. Please try again!</p>';
-            }
+            // if(mail($to, $subject, $message, $headers)){
+            //     echo '<p class="success">Your message has been sent successfully!</p>';
+            // } else{
+            //     // echo '<p class="error">Unable to send email. Please try again!</p>';
+            // }
         }
     }
 
